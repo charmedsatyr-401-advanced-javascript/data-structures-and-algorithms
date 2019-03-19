@@ -1,4 +1,6 @@
 ## Code Challenge 01: Reverse an Array
+[PR](https://github.com/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms/pull/2)
+[travis](https://travis-ci.org/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms)
 
 # Reverse an Array
 Create a function that reverses the order of the elements in an array.

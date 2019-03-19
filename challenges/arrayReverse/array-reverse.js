@@ -2,7 +2,7 @@
 
 const reverseArray = arr => {
   if (!Array.isArray(arr)) {
-    throw new Error('Argument must be an array');
+    return null;
   }
 
   const reversed = [];
@@ -12,5 +12,4 @@ const reverseArray = arr => {
   return reversed;
 };
 
-console.log(reverseArray('hello world')); // Error
-console.log(reverseArray([1, 2, 3, 4, 5])); // [5, 4, 3, 2, 1]
+module.exports = reverseArray;
