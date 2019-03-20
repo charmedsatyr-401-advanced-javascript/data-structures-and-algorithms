@@ -1,9 +1,0 @@
-{
-  "source": {
-    "include": ["./challenges"]
-  },
-  "opts": {
-    "destination": "./docs",
-    "recurse": true
-  }
-}
