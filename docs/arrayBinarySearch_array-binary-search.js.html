@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Home</title>
+    <title>JSDoc: Source: arrayBinarySearch/array-binary-search.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,32 +17,47 @@
 
 <div id="main">
 
-    <h1 class="page-title">Home</h1>
+    <h1 class="page-title">Source: arrayBinarySearch/array-binary-search.js</h1>
 
     
 
 
 
     
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>'use strict';
+/**
+ * @param  {} arr
+ * @param  {} val
+ * @param  {} =>{letlow=0;lethigh=arr.length-1;while(high>low
+ * @param  {} {letmid=Math.floor((high+low
+ * @param  {} /2
+ * @param  {} ;if(arr[mid]===val
+ * @param  {} {returnmid;}elseif(arr[mid]>val
+ * @function binarySearch
+ */
+// Binary search function
+const binarySearch = (arr, val) => {
+  let low = 0;
+  let high = arr.length - 1;
+  while (high > low) {
+    let mid = Math.floor((high + low) / 2);
+    if (arr[mid] === val) {
+      return mid;
+    } else if (arr[mid] > val) {
+      high = mid - 1;
+    } else {
+      low = mid + 1;
+    }
+  }
+  return -1;
+};
 
-
-    <h3> </h3>
-
-
-
-
-
-
-
-
-
-
-    
-
-
-
-
-
+module.exports = binarySearch;
+</code></pre>
+        </article>
+    </section>
 
 
 
