@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms.svg?branch=master)](https://travis-ci.org/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms)
+
 ## Code Challenge 03: Array Binary Search
 [PR](https://github.com/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms/pull/4)
 
