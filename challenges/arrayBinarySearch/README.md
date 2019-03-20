@@ -14,5 +14,7 @@ Write a function called BinarySearch which takes in 2 parameters: a sorted array
 ## Approach & Efficiency
 Our group declared variables `high`, `low`, and `mid`. In a `while` loop, we check if the `mid` value matches the target `val`. If it does not, we update our `high` and `low` values to virtually "split" the array into halves, until `low <= high`. Once `arr[mid] === val`, we return `mid`. If the `while` loop completes without locating a match for the target `val`, we return `-1`.
 
+This solution has a time/space efficiency of O(log n).
+
 ## Solution
 ![whiteboard](../../assets/array-binary-search-whiteboard.jpg)
