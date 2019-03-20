@@ -16,6 +16,7 @@
   "dependencies": {},
   "devDependencies": {
     "eslint": "^5.15.3",
-    "jest": "^24.5.0"
+    "jest": "^24.5.0",
+    "jsdocs": "^1.0.0"
   }
 }
