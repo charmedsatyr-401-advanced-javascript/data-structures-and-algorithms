@@ -14,7 +14,6 @@ class LinkedList {
     // This object should be aware of a default empty value assigned to
     // `head` when the linked list is instantiated.
     this.head = null;
-    this.size = 0;
   }
   // Define a method called `insert` which takes any value as an argument
   // and adds a new node with that value to the `head` of the list with
@@ -23,7 +22,6 @@ class LinkedList {
     const node = new Node(val); // create a new node
     node.next = this.head; // assign the new node's pointer to the current head
     this.head = node; // reassign the ll's head to the new node
-    this.size++; // increment the size of the ll
     // N.B.: I read the instructions as adding a node to the head and updating the
     // `head` flag, but to add something to the end, you'd just iterate through the nodes'
     // `next` properties until you found `null`, then add your new node there with a `next`
