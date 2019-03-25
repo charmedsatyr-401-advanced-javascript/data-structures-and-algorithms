@@ -1,12 +1,24 @@
 'use strict';
-
+/**
+ * @param  {*} data
+ */
+// Node class
 class Node {
   constructor(data) {
     this.data = data;
     this.next = null;
   }
 }
-
+/**
+ * @param  {} {this.head=null;}insert(val
+ * @param  {} {constnode=newNode(val
+ * @param  {} ;node.next=this.head;this.head=node;}includes(val
+ * @param  {} {letcurrentNode=this.head;while(currentNode!==null
+ * @param  {} {if(currentNode.data===val
+ * @param  {} {returntrue;}currentNode=currentNode.next;}returnfalse;}print(
+ * @param  {} {constcollection={};letcurrentNode=this.head;leti=0;while(currentNode!==null
+ * LinkedList class
+ */
 class LinkedList {
   // Within your LinkedList class, include a head property. Upon
   // instantiation, an empty Linked List should be created.
