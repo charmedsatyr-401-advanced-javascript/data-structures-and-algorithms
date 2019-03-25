@@ -17,6 +17,12 @@ const binarySearch = (arr, val) => {
     let mid = Math.floor((high + low) / 2);
     if (arr[mid] === val) {
       return mid;
+      // The next two lines are necessary
+      // due to Math.floor, but they are not
+      // reflected in the documentation.
+      // See tests for example.
+    } else if (arr[high] === val) {
+      return high;
     } else if (arr[mid] > val) {
       high = mid - 1;
     } else {
