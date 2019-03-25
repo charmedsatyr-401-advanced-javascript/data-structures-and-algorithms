@@ -1,5 +1,5 @@
-## Code Challenge 02: Array Shift
-[PR](https://github.com/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms/pull/3)
+## Code: Implement a Linked List
+[PR](https://github.com/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms/pull/6)
 
 [travis](https://travis-ci.org/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms)
 
