@@ -13,7 +13,8 @@ Implement a Linked List using JavaScript classes.
 ## Approach & Efficiency
 * I created a class `Node` and a class `LinkedList` with the specified properties.
 * `insert` reassigns the `head` value of the `LinkedList` instance to that of a new instance of `Node`, avoiding iteration through the chain of nodes in the linked list. It has a space/time efficiency of O(1).
-* `includes` and `print` may iterate through the entire chain of nodes on the linked list to find a match to a given argument or add the node's data to a returned `collection`, respectively, and have space/time efficiencies of O(n).
+* `includes` may iterate through the entire chain of nodes on the linked list to find a match to a given argument, but it only returns a Boolean. It has a time efficiency of O(n) and a space efficiency of O(1).
+* `print` may iterate through the entire chain of nodes on the linked list to add the node's data to a returned `collection`. It has a time efficiency of O(n) and, because it creates a copy of all the data in the linked list, a space efficiency of O(n).
 
 
 ## API
