@@ -44,5 +44,5 @@ Write the following methods for the Linked List class:
 
 ## Whiteboards
 ### Linked List Insertions (with Andrew Roska)
-[ll_insertions.jpg](../../assets/ll_insertions.jpg)
+![ll_insertions.jpg](../../assets/ll_insertions.jpg)
 
