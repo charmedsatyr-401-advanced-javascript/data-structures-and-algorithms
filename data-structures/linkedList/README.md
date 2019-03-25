@@ -3,7 +3,7 @@
 
 [PR for 'Linked List Insertions'](https://github.com/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms/pull/7)
 
-[![Build Status](https://travis-ci.org/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms.svg?branch=submission)](https://travis-ci.org/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms)
+[![Build Status](https://travis-ci.org/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms.svg?branch=master)](https://travis-ci.org/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms)
 
 ### Implement a Linked List
 * Implement a linked list using JavaScript classes.
