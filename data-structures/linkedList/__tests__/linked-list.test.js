@@ -88,11 +88,13 @@ describe('`LinkedList` class', () => {
   describe('`insertBefore` method', () => {
     it('Can successfully insert a node before a node located in the middle of a linked list', () => {
       const ll = new LinkedList();
-      ll.insert('c');
-      ll.insert('a');
-      ll.insertBefore('c', 'b');
+      ll.append('a');
+      ll.append('b');
+      ll.append('d');
+      ll.insertBefore('d', 'c');
       const middle = ll.head.next;
-      expect(middle.data).toBe('b');
+      const next = middle.next;
+      expect(next.data).toBe('c');
     });
     it('Can successfully insert a node before the first node of a linked list', () => {
       const ll = new LinkedList();

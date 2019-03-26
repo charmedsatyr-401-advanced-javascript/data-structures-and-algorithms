@@ -30,16 +30,15 @@ class LinkedList {
   // `append` adds a new node with the given value to the end of the list
   append(val) {
     const newNode = new Node(val);
-    let currentNode = this.head;
-
-    if (currentNode) {
-      while (currentNode.next !== null) {
-        currentNode = currentNode.next;
-      }
-      currentNode.next = newNode;
-    } else {
+    if (!this.head) {
       this.head = newNode;
+      return;
     }
+    let currentNode = this.head;
+    while (currentNode.next) {
+      currentNode = currentNode.next;
+    }
+    currentNode.next = newNode;
   }
   // Define a method called `includes` which takes any value as an argument
   // and returns a boolean result depending on whether that value exists as
@@ -81,44 +80,23 @@ class LinkedList {
   }
 
   // `insertBefore` adds a new node with the given newValue immediately before the first value node
-  /*
-   * const newNode = new Node(newVal);
-   * let current = this.head;
-   *
-   * if(current.data === val) {
-   *   newNode.next = current;
-   *   head = newNode;
-   * }
-   * while(current != null) {
-   *  if(current.next.data === val) {
-   *    newNode.next = current.next;
-   *    current.next = newNode;
-   *  }
-   *  current.next = newNode;
-   *  current = head;
-   *  }
-   *  }
-   *  }
-   *}
-   */
   insertBefore(val, newVal) {
     const newNode = new Node(newVal);
-    let leadNode = this.head.next;
     let currentNode = this.head;
 
-    if (!leadNode) {
-      newNode.next = this.head;
+    if (currentNode.data === val) {
+      newNode.next = currentNode;
       this.head = newNode;
-    } else {
-      do {
-        if (leadNode.data === val) {
-          newNode.next = leadNode;
-          currentNode.next = newNode;
-          break;
-        }
-        currentNode = currentNode.next;
-        leadNode = currentNode.next;
-      } while (leadNode.next !== null);
+      return;
+    }
+
+    while (currentNode) {
+      if (currentNode.next.data === val) {
+        newNode.next = currentNode.next;
+        currentNode.next = newNode;
+        break;
+      }
+      currentNode = currentNode.next;
     }
   }
   // Define a method called `print` which takes in no arguments and returns
