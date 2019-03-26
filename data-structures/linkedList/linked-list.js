@@ -81,6 +81,26 @@ class LinkedList {
   }
 
   // `insertBefore` adds a new node with the given newValue immediately before the first value node
+  /*
+   * const newNode = new Node(newVal);
+   * let current = this.head;
+   *
+   * if(current.data === val) {
+   *   newNode.next = current;
+   *   head = newNode;
+   * }
+   * while(current != null) {
+   *  if(current.next.data === val) {
+   *    newNode.next = current.next;
+   *    current.next = newNode;
+   *  }
+   *  current.next = newNode;
+   *  current = head;
+   *  }
+   *  }
+   *  }
+   *}
+   */
   insertBefore(val, newVal) {
     const newNode = new Node(newVal);
     let leadNode = this.head.next;
