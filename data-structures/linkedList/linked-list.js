@@ -10,15 +10,34 @@ class Node {
   }
 }
 /**
- * @param  {} {this.head=null;}insert(val
- * @param  {} {constnode=newNode(val
- * @param  {} ;node.next=this.head;this.head=node;}includes(val
+ * @param  {} {this.head=null;}append(val
+ * @param  {} {constnewNode=newNode(val
+ * @param  {} ;if(!this.head
+ * @param  {} {this.head=newNode;return;}letcurrentNode=this.head;while(currentNode.next
+ * @param  {} {currentNode=currentNode.next;}currentNode.next=newNode;}includes(val
  * @param  {} {letcurrentNode=this.head;while(currentNode!==null
  * @param  {} {if(currentNode.data===val
- * @param  {} {returntrue;}currentNode=currentNode.next;}returnfalse;}print(
+ * @param  {} {returntrue;}currentNode=currentNode.next;}returnfalse;}insert(val
+ * @param  {} {constnode=newNode(val
+ * @param  {} ;node.next=this.head;this.head=node;}insertAfter(val
+ * @param  {} newVal
+ * @param  {} {constnewNode=newNode(newVal
+ * @param  {} ;letcurrentNode=this.head;do{if(currentNode.data===val
+ * @param  {} {newNode.next=currentNode.next;currentNode.next=newNode;break;}}while(currentNode.next!==null
+ * @param  {} ;}insertBefore(val
+ * @param  {} newVal
+ * @param  {} {constnewNode=newNode(newVal
+ * @param  {} ;letcurrentNode=this.head;if(currentNode.data===val
+ * @param  {} {newNode.next=currentNode;this.head=newNode;return;}while(currentNode
+ * @param  {} {if(currentNode.next.data===val
+ * @param  {} {newNode.next=currentNode.next;currentNode.next=newNode;break;}currentNode=currentNode.next;}}print(
  * @param  {} {constcollection={};letcurrentNode=this.head;leti=0;while(currentNode!==null
+ * @param  {} {collection[i]=currentNode.data;i++;currentNode=currentNode.next;}returncollection;}kthFromEnd(k
+ * @param  {} {if(k<0
+ * @param  {Argumentmustbe>=0'} {thrownewError('`LinkedList.kthFromEnd`error
+ *
  * LinkedList class
- */
+ **/
 class LinkedList {
   // Within your LinkedList class, include a head property. Upon
   // instantiation, an empty Linked List should be created.
@@ -112,6 +131,40 @@ class LinkedList {
       currentNode = currentNode.next;
     }
     return collection;
+  }
+  // Write a method for the Linked List class which takes a number, k, as a parameter.
+  // Return the node’s value that is k from the end of the linked list. You have access
+  // to the Node class and all the properties on the Linked List class as well as the
+  // methods created in previous challenges.
+  kthFromEnd(k) {
+    if (k < 0) {
+      throw new Error('`LinkedList.kthFromEnd` error: Argument must be >= 0');
+    }
+    let len = 1;
+    let current = this.head;
+    // Find the length of the LinkedList
+    while (current.next) {
+      len++;
+      current = current.next;
+    }
+
+    // Throw an error if `k` is greater than the length of the
+    // `LinkedList` instance.
+    if (k > len) {
+      throw new Error(
+        '`LinkedList.kthFromEnd` error: Argument must be less than the length of the `LinkedList` instance.'
+      );
+    }
+
+    // Reset current to head
+    current = this.head;
+
+    // Iterate to the target node
+    for (let i = 1; i < len - k; i++) {
+      current = current.next;
+    }
+    // Return its value
+    return current.data;
   }
 }
 
