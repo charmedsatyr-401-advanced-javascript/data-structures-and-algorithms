@@ -9,4 +9,6 @@
 * [Code Challenge 03: Array Binary Search](challenges/arrayBinarySearch/README.md)
 
 ### Data Structures
-* [Code: Linked Lists](data-structures/linkedList/README.md)
+* [Linked Lists](data-structures/linkedList/README.md)
+
+* [Merge Two Linked Lists](data-structures/llMerge/README.md)
