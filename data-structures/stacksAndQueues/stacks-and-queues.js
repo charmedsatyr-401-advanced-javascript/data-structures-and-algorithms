@@ -24,7 +24,6 @@ class Stack {
   // Push takes any value as an argument
   // and adds a new node with that value to the top
   // of the stack with an O(1) Time performance
-  //
   push(val) {
     const node = new Node(val); // create a new node
     node.next = this.top; // assign the new node's pointer to the current top
@@ -53,7 +52,7 @@ class Stack {
 
 class Queue {
   constructor() {
-    this.rear = null;
+    this.back = null;
     this.front = null;
   }
   // Define a method called enqueue which takes any value
@@ -61,20 +60,44 @@ class Queue {
   // the back of the queue with an O(1) Time performance.
   enqueue(val) {
     const node = new Node(val);
-    node.next = this.rear;
-    this.rear = node;
+    node.next = this.back;
+    this.back = node;
+    if (!this.front) {
+      this.front = node;
+    }
   }
   // Define a method called dequeue that does not take any
   // argument, removes the node from the front of the queue,
   // and returns the node’s value.
   dequeue() {
-    //
+    let current = this.back;
+    if (!current) {
+      throw new Error('`dequeue` Error: The queue is empty and cannot dequeue.');
+    }
+    if (!current.next) {
+      this.back = null;
+      this.front = null;
+      return current.data;
+    }
+
+    while (current.next && current.next.next) {
+      current = current.next;
+    }
+    const target = current.next;
+    current.next = null;
+    this.front = current;
+    return target.data;
   }
   // Define a method called peek that does not take an argument
   // and returns the value of the node located in the front of
   // the stack.
   peek() {
-    //
+    if (!this.front) {
+      return null;
+    }
+    if (this.front) {
+      return this.front.data;
+    }
   }
 }
 
