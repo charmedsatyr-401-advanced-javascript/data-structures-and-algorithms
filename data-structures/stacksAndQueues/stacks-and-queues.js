@@ -9,13 +9,14 @@ class Node {
     this.next = null;
   }
 }
-
 /**
  * @param  {} {this.top=null;}push(val
  * @param  {} {constnode=newNode(val
  * @param  {} ;node.next=this.top;this.top=node;}pop(
  * @param  {} {lettop;if(this.top.next
- * @param  {} {top=this.top;this.top=this.top.next;}else{top=this.top;this.top=null;}returntop.data;}peek(
+ * @param  {} {top=this.top;this.top=this.top.next;}elseif(this.top
+ * @param  {} {top=this.top;this.top=null;}else{returnnull;}returntop.data;}peek(
+ * @param  {} {if(this.top
  */
 class Stack {
   constructor() {
@@ -37,19 +38,35 @@ class Stack {
     if (this.top.next) {
       top = this.top;
       this.top = this.top.next;
-    } else {
+    } else if (this.top) {
       top = this.top;
       this.top = null;
+    } else {
+      return null;
     }
     return top.data;
   }
   // Peek does not take an argument and returns the value
   // of the node located at the top of the stack
   peek() {
-    return this.top.data;
+    if (this.top) {
+      return this.top.data;
+    }
+    return null;
   }
 }
-
+/**
+ * @param  {} {this.back=null;this.front=null;}enqueue(val
+ * @param  {} {constnode=newNode(val
+ * @param  {} ;node.next=this.back;this.back=node;if(!this.front
+ * @param  {} {this.front=node;}}dequeue(
+ * @param  {} {letcurrent=this.back;if(!current
+ * @param  {} {returnnull;}if(!current.next
+ * @param  {} {this.back=null;this.front=null;returncurrent.data;}while(current.next&&current.next.next
+ * @param  {} {current=current.next;}consttarget=current.next;current.next=null;this.front=current;returntarget.data;}peek(
+ * @param  {} {if(!this.front
+ * @param  {} {returnnull;}if(this.front
+ */
 class Queue {
   constructor() {
     this.back = null;
@@ -72,7 +89,7 @@ class Queue {
   dequeue() {
     let current = this.back;
     if (!current) {
-      throw new Error('`dequeue` Error: The queue is empty and cannot dequeue.');
+      return null;
     }
     if (!current.next) {
       this.back = null;
