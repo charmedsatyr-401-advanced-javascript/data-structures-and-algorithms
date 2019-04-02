@@ -15,4 +15,4 @@
 
 * [Stacks and Queues](data-structures/stacksAndQueues/README.md)
 
-* [Queues with Stacks](data-structures/queuesWithStacks/README.md)
+* [Queue with Stacks](data-structures/queueWithStacks/README.md)
