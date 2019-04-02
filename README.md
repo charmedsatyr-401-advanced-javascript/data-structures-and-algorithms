@@ -14,3 +14,5 @@
 * [Merge Two Linked Lists](data-structures/llMerge/README.md)
 
 * [Stacks and Queues](data-structures/stacksAndQueues/README.md)
+
+* [Queues with Stacks](data-structures/queuesWithStacks/README.md)
