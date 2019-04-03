@@ -76,6 +76,9 @@ class Queue {
   // as an argument and adds a new node with that value to
   // the back of the queue with an O(1) Time performance.
   enqueue(val) {
+    // NOTE THAT THIS IMPLEMENTATION POINTS THE `NEXT` POINTERS
+    // IN THE WRONG DIRECTION. `NEXT` SHOULD START AT THE FRONT AND
+    // POINT TOWARD THE BACK.
     const node = new Node(val);
     node.next = this.back;
     this.back = node;
