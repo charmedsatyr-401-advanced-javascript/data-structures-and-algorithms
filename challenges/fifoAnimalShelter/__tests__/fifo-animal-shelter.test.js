@@ -77,5 +77,19 @@ describe('`AnimalShelter` class', () => {
       const oops = as.dequeue('platypus');
       expect(oops).toBeNull();
     });
+    it('Maintains FIFO order after multiple dequeues', () => {
+      const as = new AnimalShelter();
+      as.enqueue('cat');
+      as.enqueue('cat');
+      as.enqueue('dog');
+      as.enqueue('dog');
+      as.enqueue('cat');
+
+      as.dequeue('dog');
+      expect(as.front.data).toBe('cat');
+      expect(as.front.next.data).toBe('cat');
+      expect(as.front.next.next.data).toBe('dog');
+      expect(as.front.next.next.next.data).toBe('cat');
+    });
   });
 });
