@@ -8,9 +8,13 @@
 
 * [Code Challenge 03: Array Binary Search](challenges/arrayBinarySearch/README.md)
 
+* [Code Challenge 12: FIFO Animal Shelter](challenges/fifoAnimalShelter/README.md)
+
 ### Data Structures
 * [Linked Lists](data-structures/linkedList/README.md)
 
 * [Merge Two Linked Lists](data-structures/llMerge/README.md)
 
 * [Stacks and Queues](data-structures/stacksAndQueues/README.md)
+
+* [Queue with Stacks](data-structures/queueWithStacks/README.md)
