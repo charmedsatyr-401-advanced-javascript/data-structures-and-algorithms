@@ -60,15 +60,28 @@ class AnimalShelter {
     }
 
     // Iteration
+    let target;
+    this.front.initial = true;
+    console.log('count:', count);
     while (current.next) {
       this.enqueue(current.data);
       this.front = current.next;
       current = this.front;
       if (current.data === pref) {
         this.front = current.next;
-        return current.data;
+        target = current.data;
+        break;
       }
     }
+    // Cycle through to restore initial
+    while (!current.initial) {
+      this.enqueue(current.data);
+      this.front = current.next;
+      current = this.front;
+      count++;
+    }
+    delete this.front.beginning;
+    return target;
   }
 }
 
