@@ -14,6 +14,10 @@ const { Stack } = require('../../data-structures/stacksAndQueues/stacks-and-queu
  * @params {string} A string that may include the characters {}()[]
  **/
 const multiBracketValidation = str => {
+  if (typeof str !== 'string' || !str) {
+    return null;
+  }
+
   const st = new Stack();
   const opener = /[([{]/g;
   const closer = /[)\]}]/g;
