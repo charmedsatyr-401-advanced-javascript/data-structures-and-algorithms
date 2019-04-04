@@ -18,3 +18,5 @@
 * [Stacks and Queues](data-structures/stacksAndQueues/README.md)
 
 * [Queue with Stacks](data-structures/queueWithStacks/README.md)
+
+* [Multi-Bracket Validation](data-structures/multiBracketValidation/README.md)
