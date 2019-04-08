@@ -1,5 +1,5 @@
-# Code: Linked Lists
-[PR'](https://github.com/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms/pull/6)
+# Code: Trees
+[PR](https://github.com/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms/pull/6)
 
 TRAVIS
 
