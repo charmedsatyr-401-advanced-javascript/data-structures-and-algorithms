@@ -130,18 +130,20 @@ class BinarySearchTree {
     if (val === root.data) {
       return;
     }
-    while (val < root.data) {
+    if (val < root.data) {
       if (!root.left) {
         root.left = new Node(val);
-      } else {
-        this.add(val, root.left);
+        return;
+      } else if (root.left) {
+        return this.add(val, root.left);
       }
     }
-    while (val > root.data) {
+    if (val >= root.data) {
       if (!root.right) {
         root.right = new Node(val);
+        return;
       } else {
-        this.add(val, root.right);
+        return this.add(val, root.right);
       }
     }
   }
