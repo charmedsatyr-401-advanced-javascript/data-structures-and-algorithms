@@ -10,6 +10,8 @@
 
 * [Code Challenge 12: FIFO Animal Shelter](challenges/fifoAnimalShelter/README.md)
 
+* [Code Challenge 13: Multi-Bracket Validation](challenges/multiBracketValidation/README.md)
+
 ### Data Structures
 * [Linked Lists](data-structures/linkedList/README.md)
 
