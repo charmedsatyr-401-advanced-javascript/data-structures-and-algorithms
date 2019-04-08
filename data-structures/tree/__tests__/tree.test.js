@@ -85,7 +85,7 @@ describe('`BinarySearchTree` class', () => {
     });
   });
   describe('`contains` method', () => {
-    it('Returns a Boolean if a tree contains a `val`', () => {
+    xit('Returns a Boolean if a tree contains a `val`', () => {
       //
     });
   });
