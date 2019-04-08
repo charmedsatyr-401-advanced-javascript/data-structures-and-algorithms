@@ -1,7 +1,8 @@
 # Code: Trees
-[PR](https://github.com/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms/pull/6)
 
-TRAVIS
+[PR](https://github.com/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms/pull/14)
+
+[![Build Status](https://travis-ci.org/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms.svg?branch=tree)](https://travis-ci.org/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms)
 
 ### Implement a Tree
 * Implement a tree
