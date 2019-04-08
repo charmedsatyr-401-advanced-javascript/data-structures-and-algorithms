@@ -32,21 +32,29 @@ class BinaryTree {
   // that does not have 2 child nodes, and insert the
   // new node as a child.
   // Prefer filling from left to right.
-  add(val, root = this.root, q = new Queue()) {
-    q.enqueue(root);
-    const de = q.dequeue();
-    const left = de.left;
-    const right = de.right;
-    if (left && right) {
-      q.enqueue(left);
-      q.enqueue(right);
-      this.add(val, left, q);
-    } else if (!left) {
-      root.left = new Node(val);
-    } else if (!right) {
-      root.right = new Node(val);
+  add(val) {
+    const q = new Queue();
+    let current = this.root;
+    if (!current) {
+      this.root = new Node(val);
+      return;
+    }
+    q.enqueue(current);
+    while (q.peek()) {
+      current = q.dequeue();
+      if (!current.left) {
+        current.left = new Node(val);
+        return;
+      }
+      if (!current.right) {
+        current.right = new Node(val);
+        return;
+      }
+      q.enqueue(current.left);
+      q.enqueue(current.right);
     }
   }
+
   /**
    *   a
    *  / \
@@ -123,35 +131,45 @@ class BinarySearchTree {
   // Define a method named `add` that accepts a value,
   // and adds a new node with that value in the correct
   // location in the binary search tree.
-  add(val, root = this.root) {
-    if (!root) {
-      return null;
-    }
-    if (val === root.data) {
+  add(val) {
+    let current = this.root;
+    if (!current) {
+      this.root = new Node(val);
       return;
     }
-    if (val < root.data) {
-      if (!root.left) {
-        root.left = new Node(val);
-        return;
-      } else if (root.left) {
-        return this.add(val, root.left);
-      }
-    }
-    if (val >= root.data) {
-      if (!root.right) {
-        root.right = new Node(val);
-        return;
-      } else {
-        return this.add(val, root.right);
+
+    while (current) {
+      if (val < current.data) {
+        if (!current.left) {
+          current.left = new Node(val);
+          break;
+        }
+        current = current.left;
+      } else if (val >= current.data) {
+        if (!current.right) {
+          current.right = new Node(val);
+          break;
+        }
+        current = current.right;
       }
     }
   }
   // Define a method named contains that accepts a value,
   // and returns a boolean indicating whether or not the value
   // is in the tree at least once.
-  contains(val) {
-    //
+  contains(val, current = this.root) {
+    if (current.data === val) {
+      return true;
+    }
+    if (current.data > val && current.left) {
+      current = current.left;
+      return this.contains(val, current);
+    }
+    if (current.data < val && current.right) {
+      current = current.right;
+      return this.contains(val, current);
+    }
+    return false;
   }
 }
 
