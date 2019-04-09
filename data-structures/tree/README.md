@@ -1,6 +1,7 @@
 # Code: Trees
 
 [PR](https://github.com/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms/pull/14)
+
 [PR Breadth First Traversal](https://github.com/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms/pull/16)
 
 [![Build Status](https://travis-ci.org/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms.svg?branch=breadth_first)](https://travis-ci.org/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms&branch=breadth_first)
@@ -44,5 +45,6 @@
   * `contains()` -> `undefined`
 
 ## Whiteboards
-N/A
+Breadth First Order (with Chris Merritt and Aaron Bruce)
+![breadth-first](../../assets/breadth_first_order.jpg)
 
