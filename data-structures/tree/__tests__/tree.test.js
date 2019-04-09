@@ -2,6 +2,15 @@
 
 const { Node, BinaryTree, BinarySearchTree } = require('../tree.js');
 
+describe('`Node` class', () => {
+  it('Can successfully instantiate a node', () => {
+    const node = new Node(0);
+    expect(node.left).toBeNull();
+    expect(node.data).toBe(0);
+    expect(node.right).toBeNull();
+  });
+});
+
 describe('`BinaryTree` class', () => {
   it('Can successfully instantiate an empty tree', () => {
     const bt = new BinaryTree();
@@ -39,6 +48,21 @@ describe('`BinaryTree` class', () => {
       expect(d.left.data).toBe('h');
     });
   });
+  describe('`breadthFirstOrder` method', () => {
+    it('Returns `null` if the tree is empty', () => {
+      const bt = new BinaryTree();
+      const result = bt.breadthFirstOrder();
+      expect(result).toBeNull();
+    });
+    it('Can successfully return a collection from a breadth-first order traversal', () => {
+      const bt = new BinaryTree();
+      const arr = [1, 2, 3, 4, 5, 6];
+      arr.forEach(n => bt.add(n));
+      const result = bt.breadthFirstOrder();
+      expect(result).toEqual(arr);
+    });
+  });
+
   describe('`preOrder` method', () => {
     it('Can successfully return a collection from a preorder traversal', () => {
       const bt = new BinaryTree('a');
@@ -60,7 +84,7 @@ describe('`BinaryTree` class', () => {
       bt.add('d');
       bt.add('e');
       bt.add('f');
-      // expect(bt.inOrder()).toEqual(['d', 'b', 'e', 'a', 'f', 'c']);
+      expect(bt.inOrder()).toEqual(['d', 'b', 'e', 'a', 'f', 'c']);
     });
   });
   describe('`postOrder` method', () => {
