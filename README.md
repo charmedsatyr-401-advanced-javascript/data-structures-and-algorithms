@@ -12,6 +12,8 @@
 
 * [Code Challenge 13: Multi-Bracket Validation](challenges/multiBracketValidation/README.md)
 
+* [Code Challenge 16: FizzBuzz Tree](challenges/fizzBuzzTree/README.md)
+
 ### Data Structures
 * [Linked Lists](data-structures/linkedList/README.md)
 
