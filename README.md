@@ -21,3 +21,4 @@
 
 * [Queue with Stacks](data-structures/queueWithStacks/README.md)
 
+* [Tree](data-structures/tree/README.md)
