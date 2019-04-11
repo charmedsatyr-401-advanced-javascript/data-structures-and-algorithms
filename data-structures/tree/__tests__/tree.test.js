@@ -48,6 +48,20 @@ describe('`BinaryTree` class', () => {
       expect(d.left.data).toBe('h');
     });
   });
+  describe('`findMaximumValue` method', () => {
+    it('Returns `null` if the tree is empty', () => {
+      const bt = new BinaryTree();
+      const result = bt.breadthFirstOrder();
+      expect(result).toBeNull();
+    });
+    it('Can successfully return the maximum value in a tree', () => {
+      const bt = new BinaryTree();
+      const arr = [0, 1, 2, 20, 3, 4, 5, 42.1, 6];
+      arr.forEach(n => bt.add(n));
+      const result = bt.findMaximumValue();
+      expect(result).toEqual(42.1);
+    });
+  });
   describe('`breadthFirstOrder` method', () => {
     it('Returns `null` if the tree is empty', () => {
       const bt = new BinaryTree();
