@@ -6,7 +6,7 @@
 
 [PR Find Maximum Binary Tree](https://github.com/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms/pull/17)
 
-[![Build Status](https://travis-ci.org/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms.svg?branch=find_maximum_binary_tree)](https://travis-ci.org/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms&branch=find_maximum_binary_tree)
+[![Build Status](https://travis-ci.org/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms.svg?branch=find_maximum_binary_tree)](https://travis-ci.org/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms/builds/518597230)
 
 ### Trees
 
