@@ -14,7 +14,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "faker": "^4.1.0"
+  },
   "devDependencies": {
     "eslint": "^5.15.3",
     "jest": "^24.5.0",
