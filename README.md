@@ -24,3 +24,6 @@
 * [Queue with Stacks](data-structures/queueWithStacks/README.md)
 
 * [Tree](data-structures/tree/README.md)
+
+### Sorts
+* [Insertion Sort](sorts/insertion-sort/README.md)
