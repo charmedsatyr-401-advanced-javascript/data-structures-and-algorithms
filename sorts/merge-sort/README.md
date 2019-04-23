@@ -1,5 +1,5 @@
 ## Sorts: Implement Insertion Sort
-[PR](https://github.com/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms/pull/18)
+[PR](https://github.com/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms/pull/19)
 
 [![Build Status](https://travis-ci.org/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms.svg?branch=merge-sort)](https://travis-ci.org/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms)
 
