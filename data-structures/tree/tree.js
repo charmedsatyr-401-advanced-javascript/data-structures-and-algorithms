@@ -55,6 +55,30 @@ class BinaryTree {
     }
   }
 
+  findMaximumValue() {
+    const q = new Queue();
+    let current = this.root;
+    let max = null;
+    if (!current) {
+      return null;
+    }
+    max = current.data;
+    q.enqueue(current);
+    while (q.peek()) {
+      current = q.dequeue();
+      if (current.data > max) {
+        max = current.data;
+      }
+      if (current.left) {
+        q.enqueue(current.left);
+      }
+      if (current.right) {
+        q.enqueue(current.right);
+      }
+    }
+    return max;
+  }
+
   breadthFirstOrder() {
     const q = new Queue();
     let current = this.root;

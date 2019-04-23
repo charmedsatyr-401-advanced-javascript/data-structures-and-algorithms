@@ -4,12 +4,13 @@
 
 [PR Breadth First Traversal](https://github.com/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms/pull/16)
 
-[![Build Status](https://travis-ci.org/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms.svg?branch=breadth_first)](https://travis-ci.org/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms&branch=breadth_first)
+[PR Find Maximum Binary Tree](https://github.com/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms/pull/17)
 
-### Implement a Tree
-* Implement a tree
+[![Build Status](https://travis-ci.org/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms.svg?branch=find_maximum_binary_tree)](https://travis-ci.org/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms/builds/518597230)
 
-## Challenge
+### Trees
+
+## Challenges
 ### Implement a Tree
 * Create a Node class that has properties for the value stored in the node, the left child node, and the right child node.
 * Create a BinaryTree class
@@ -20,11 +21,16 @@
   * Define a method named contains that accepts a value, and returns a boolean indicating whether or not the value is in the tree at least once.
 ### Breadth First Traversal
 * Write a breadth first traversal method which takes a Binary Tree as its unique input. Without utilizing any of the built-in methods available to your language, traverse the input tree using a Breadth-first approach; print every visited node’s value.
+### Find Maximum Value
+* Find the Maximum Value in a Binary Tree
+
+
 
 ## Approach & Efficiency
 * Node: The Node class was defined with `left`, `right`, and `data` properties. An instance of `node` can be instantiated with a `data` argument.
 * BinaryTree class
   * `add`: This method takes `val`, `root`, and `q` arguments; `root` defaults to the `BinaryTree` instance's `root`, and `q` defaults to a new `Queue` instance if they are not provided. The method enqueues and dequeues the root and then checks the dequeue for `left` and `right` properties. If both exist, the function calls itself recursively on the `left` node. If the `left` does not exist, a new node is created there, or it's created at the `right` node if a `right` does not exist. In this way, New nodes are added to the tree preferring left-to-right order. This method has a time efficiency of O(n) and a space efficiency of O(1).
+  * `findMaximumValue`: This method uses the the same traversal method as the `breadthFirstOrder` method. However, instead of adding values to an array, it compares the value of each node to the value of a `max` variable, which is initialized at `null`, updated to the value of the `root`, and updated each time a node's value is greater than it, in the course of the breadth-first traversal. At the end of the method, the value of `max` is returned. This method has a time efficiency of O(n) and a space efficiency of O(w), where `w` is the width of the tree.
   * `breadthFirstOrder`: This method takes no arguments. If the tree `root` is empty, `null` is returned. Otherwise, an empty array is created to store values, an instance of a Queue is created in the method as a helper function, and the `root` is assigned to a `current` variable. A `while` loop is declared while the queue is not empty. Within the loop, the queue is dequeued, and the value of the dequeue is added to the `values` array. Then, if the dequeued node has a left child, it is queued, followed by any right child. The loop then restarts. This method ensures that each generation of the root's children is added to the queue in left to right order and their values are pushed to the array in order. After the while loop ends, the `values` array is returned. This method has a time and space efficiency of O(n).
   * `preOrder`: This method takes `root` and `values` arguments that default to the instance's `root` and an empty array, respectively. The root's `data` is added to the array; if there are `left` and `right` nodes to the `root`, `preOrder` is called on those nodes recursively using the existing `values` set. `values` is returned at the end. This method has a time efficiency of O(n) and a space efficiency of O(1).
   * `inOrder`: This method takes `root` and `values` arguments that default to the instance's `root` and an empty array, respectively. If there is a `left` node to the `root`, `inOrder` is called on it recursively using the existing `values` set. Then, root's `data` is added to the array. Last, if there is a `right` node to the `root`, `inOrder` is called recursively on it using the existing `values` set. `values` is returned at the end. This method has a time efficiency of O(n) and a space efficiency of O(1).
@@ -36,10 +42,11 @@
 ## API
 * `BinaryTree`
   * `add(val, root, q)` -> `undefined`; adds a node with `val` to the tree
+  * `findMaximumValue()` -> `Number`
   * `breadthFirstOrder()` -> `Array`
-  * `preOrder(root, values)` -> Array
-  * `inOrder(root, values)` -> Array
-  * `postOrder(root, values)` -> Array
+  * `preOrder(root, values)` -> `Array`
+  * `inOrder(root, values)` -> `Array`
+  * `postOrder(root, values)` -> `Array`
 * `BinarySearchTree`
   * `add(val, root)` -> `undefined`; adds a node with `val` to the tree in order
   * `contains()` -> `undefined`
@@ -48,3 +55,5 @@
 Breadth First Order (with Chris Merritt and Aaron Bruce)
 ![breadth-first](../../assets/breadth_first_order.jpg)
 
+Find Maximum Value (with Aaron Bruce)
+![maximum-value](../../assets/find_maximum_value.jpg)
