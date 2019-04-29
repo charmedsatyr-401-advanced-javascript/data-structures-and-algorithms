@@ -51,7 +51,7 @@ describe('`LinkedList` class', () => {
       ll.insert('c');
       const collection = ll.print();
       expect(collection).toBeDefined();
-      expect(collection).toEqual({ 0: 'c', 1: 'b', 2: 'a' });
+      expect(collection).toEqual(['c', 'b', 'a']);
     });
   });
   describe('`append` method', () => {

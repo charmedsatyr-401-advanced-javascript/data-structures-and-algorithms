@@ -25,6 +25,8 @@
 
 * [Tree](data-structures/tree/README.md)
 
+* [Hash Table](data-structures/hashtable/README.md)
+
 ### Sorts
 * [Insertion Sort](sorts/insertion-sort/README.md)
 
