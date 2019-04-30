@@ -14,6 +14,8 @@
 
 * [Code Challenge 16: FizzBuzz Tree](challenges/fizzBuzzTree/README.md)
 
+* [Code Challenge 26: Repeated Word](challenges/repeatedWord/README.md)
+
 ### Data Structures
 * [Linked Lists](data-structures/linkedList/README.md)
 
