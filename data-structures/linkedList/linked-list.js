@@ -121,7 +121,7 @@ class LinkedList {
   // Define a method called `print` which takes in no arguments and returns
   // a collection all of the current Node values in the Linked List.
   print() {
-    const collection = {}; // Collection will be an object with keys corresponding
+    const collection = []; // Collection will be an array
     // to the node's 0-based position in the linked list
     let currentNode = this.head;
     let i = 0;
