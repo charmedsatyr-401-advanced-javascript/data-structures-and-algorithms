@@ -20,6 +20,7 @@ This solution has a Big O notation efficiency of O(n^2) for time (in the unlikel
 
 ## API
 `hash(word)` -> `Number`
+
 `repeatedWord(string)` -> a word or `null`
 
 ## Solution
