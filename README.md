@@ -27,3 +27,5 @@
 
 ### Sorts
 * [Insertion Sort](sorts/insertion-sort/README.md)
+
+* [Merge Sort](sorts/merge-sort/README.md)
