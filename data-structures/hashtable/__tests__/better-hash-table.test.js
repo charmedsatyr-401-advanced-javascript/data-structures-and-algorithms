@@ -8,7 +8,7 @@ const log = jest.spyOn(global.console, 'log').mockImplementation(() => {});
 
 describe('HashTable', () => {
   it('Adding a value to your hashtable results in the value being in the data structure in a linked list', () => {
-    expect.assert(1);
+    // expect.assert(1);
     const h = new HashTable();
     const value = word();
     h.add(value);
@@ -16,7 +16,7 @@ describe('HashTable', () => {
     expect(h.table[index].includes(value)).toBeTruthy();
   });
   it('Handle a collision within the hashtable ', () => {
-    expect.assert(2);
+    // expect.assert(2);
     const h = new HashTable();
     const value1 = 'brain';
     const value2 = 'brian';
@@ -28,7 +28,7 @@ describe('HashTable', () => {
     expect(h.table[index1].print()).toEqual([value1, value2]);
   });
   it('Returns `true` if a value exists in the hash table', () => {
-    expect.assert(1);
+    // expect.assert(1);
     const h = new HashTable();
     const value = word();
     h.add(value);
@@ -36,14 +36,14 @@ describe('HashTable', () => {
     expect(result).toBeTruthy();
   });
   it('Returns `false` if a value does not exist in the hash table', () => {
-    expect.assert(1);
+    // expect.assert(1);
     const h = new HashTable();
     const value = word();
     const result = h.has(value);
     expect(result).toBeFalsy();
   });
   it('Will not store a duplicate value', () => {
-    expect.assert(2);
+    // expect.assert(2);
     const h = new HashTable();
     const value = word();
     h.add(value);
@@ -53,7 +53,7 @@ describe('HashTable', () => {
     expect(result).toHaveLength(1);
   });
   it('Successfully hash a value to an in-range index', () => {
-    expect.assert(2);
+    // expect.assert(2);
     const h = new HashTable();
     const value = word();
     const hash = h.hash(value);
