@@ -1,7 +1,7 @@
 ## Code Challenge 26: First Repated Word
-[PR](https://github.com/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms/pull/15)
+[PR](https://github.com/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms/pull/22)
 
-[![Build Status](https://travis-ci.org/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms.svg?branch=repeated_word)](https://travis-ci.org/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms?branch=repeated_word)
+[![Build Status](https://travis-ci.org/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms.svg?branch=repeated_word)](https://travis-ci.org/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms)
 
 # First Repeated Word
 Find the first repeated word in a book.
