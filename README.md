@@ -18,7 +18,7 @@
 
 * [Code Challenge 27: Tree Intersection](challenges/tree_intersection/README.md)
 
-* [Code Challenge 28: Left Join](challenges/left_join/README.md)
+* [Code Challenge 28: Left Join](challenges/leftJoin/README.md)
 
 ### Data Structures
 * [Linked Lists](data-structures/linkedList/README.md)
