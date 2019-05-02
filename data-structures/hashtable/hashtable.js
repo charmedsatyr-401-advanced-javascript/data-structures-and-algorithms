@@ -6,7 +6,7 @@ const arraySize = 1024;
 
 class Hashtable {
   constructor() {
-    this.table = Array(1024).fill(new LinkedList());
+    this.table = Array(arraySize).fill(new LinkedList());
   }
   add(key, value) {
     const index = this.hash(key);
