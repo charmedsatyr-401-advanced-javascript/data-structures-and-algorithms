@@ -16,7 +16,9 @@
 
 * [Code Challenge 26: Repeated Word](challenges/repeatedWord/README.md)
 
-* [Code Challenge 27: Tree Intersection](challenges/treeIntersection/README.md)
+* [Code Challenge 27: Tree Intersection](challenges/tree_intersection/README.md)
+
+* [Code Challenge 28: Left Join](challenges/left_join/README.md)
 
 ### Data Structures
 * [Linked Lists](data-structures/linkedList/README.md)
