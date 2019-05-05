@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
+    "start": "echo \"Error: This module is a medley of scripts and cannot be tamed!\" && exit 0",
     "lint": "eslint **/*.js",
     "test": "jest --coverage --verbose",
     "test-watch": "jest --watchAll --verbose --coverage",
@@ -19,7 +19,18 @@
   },
   "devDependencies": {
     "eslint": "^5.15.3",
+    "husky": "^2.2.0",
     "jest": "^24.5.0",
-    "jsdocs": "^1.0.0"
+    "jsdocs": "^1.0.0",
+    "lint-staged": "^8.1.6"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "export CI=true && lint-staged && npm run test",
+      "pre-push": "export CI=true && lint-staged && npm run test"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": "eslint '**/*.js'"
   }
 }
