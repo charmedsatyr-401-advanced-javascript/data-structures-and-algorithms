@@ -31,6 +31,8 @@
 
 * [Hash Table](data-structures/hashtable/README.md)
 
+* [Graph](data-structures/graph/README.md)
+
 ### Sorts
 * [Insertion Sort](sorts/insertion-sort/README.md)
 

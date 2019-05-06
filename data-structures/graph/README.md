@@ -1,6 +1,6 @@
 # Code: Graph
-* [PR]()
-* Travis
+* [PR](https://github.com/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms/pull/25)
+* [![Build Status](https://travis-ci.org/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms.svg?branch=graph)](https://travis-ci.org/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms)
 
 ### Hash Table
 * Implement a Graph.
