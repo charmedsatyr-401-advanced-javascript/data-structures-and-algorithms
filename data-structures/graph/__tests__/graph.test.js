@@ -104,6 +104,74 @@ describe('`Graph` class', () => {
     });
   });
 
+  describe('`breadthFirst` method', () => {
+    it('returns `null` if the graph is empty', () => {
+      const graph = new Graph();
+      const result = graph.breadthFirst();
+      expect(result).toBeNull();
+    });
+    it('logs each value', () => {
+      log.mockClear();
+      const graph = new Graph();
+      const a = graph.addNode(alphaNumeric());
+      const b = graph.addNode(alphaNumeric());
+      const c = graph.addNode(alphaNumeric());
+      const d = graph.addNode(alphaNumeric());
+      const e = graph.addNode(alphaNumeric());
+      const f = graph.addNode(alphaNumeric());
+
+      graph.addUndirectedEdge(a, b, 1);
+      graph.addUndirectedEdge(b, c, 1);
+      graph.addUndirectedEdge(b, d, 1);
+      graph.addUndirectedEdge(c, d, 1);
+      graph.addUndirectedEdge(c, e, 1);
+      graph.addUndirectedEdge(c, f, 1);
+      graph.addUndirectedEdge(d, f, 1);
+      graph.addUndirectedEdge(e, f, 1);
+
+      const result = graph.breadthFirst(a);
+
+      expect(log).toHaveBeenCalledWith(result);
+
+      log.mockClear();
+    });
+    it('returns `null` if given an argument with no `data`', () => {
+      const graph = new Graph();
+      const a = graph.addNode(alphaNumeric());
+      const b = graph.addNode(alphaNumeric());
+      const c = graph.addNode(alphaNumeric());
+      graph.addUndirectedEdge(a, b, 1);
+      graph.addUndirectedEdge(b, c, 1);
+
+      const empty = {};
+      const result = graph.breadthFirst(empty);
+      expect(result).toBeNull();
+    });
+    it('can successfully return a collection from a breadth-first order traversal', () => {
+      const graph = new Graph();
+      const a = graph.addNode(alphaNumeric());
+      const b = graph.addNode(alphaNumeric());
+      const c = graph.addNode(alphaNumeric());
+      const d = graph.addNode(alphaNumeric());
+      const e = graph.addNode(alphaNumeric());
+      const f = graph.addNode(alphaNumeric());
+
+      graph.addUndirectedEdge(a, b, 1);
+      graph.addUndirectedEdge(b, c, 1);
+      graph.addUndirectedEdge(b, d, 1);
+      graph.addUndirectedEdge(c, d, 1);
+      graph.addUndirectedEdge(c, e, 1);
+      graph.addUndirectedEdge(c, f, 1);
+      graph.addUndirectedEdge(d, f, 1);
+      graph.addUndirectedEdge(e, f, 1);
+
+      const result = graph.breadthFirst(a);
+      const expected = [a, b, c, d, e, f];
+
+      expect(result).toEqual(expected);
+    });
+  });
+
   describe('`getNodes` method', () => {
     it('returns all of the nodes in the graph as a collection', () => {
       const graph = new Graph();
@@ -175,8 +243,9 @@ describe('`Graph` class', () => {
       const graph = new Graph();
       const ad = alphaNumeric();
       const bd = alphaNumeric();
-      const a = graph.addNode(ad);
-      const b = graph.addNode(bd);
+      graph.addNode(ad);
+      graph.addNode(bd);
+
       const result = graph.size();
       const expected = 2;
       expect(result).toEqual(expected);

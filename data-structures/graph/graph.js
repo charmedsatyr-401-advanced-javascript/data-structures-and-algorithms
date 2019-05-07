@@ -1,5 +1,7 @@
 'use strict';
 
+const { Queue } = require('../stacksAndQueues/stacks-and-queues');
+
 class Node {
   constructor(data = null) {
     this.data = data;
@@ -39,6 +41,33 @@ class Graph {
     const first = this.addDirectedEdge(a, b, weight);
     const second = this.addDirectedEdge(b, a, weight);
     return [first, second];
+  }
+
+  breadthFirst(node) {
+    if (node === undefined || node.data === undefined) {
+      return null;
+    }
+
+    const q = new Queue();
+    q.enqueue(node);
+
+    const arr = [];
+
+    while (q.peek() !== null) {
+      const current = q.dequeue();
+      if (arr.includes(current)) {
+        continue;
+      }
+      arr.push(current);
+      const n = this.getNeighbors(current);
+      for (let i = 0; i < n.length; i++) {
+        if (!arr.includes(n[i].node)) {
+          q.enqueue(n[i].node);
+        }
+      }
+    }
+    console.log(arr);
+    return arr;
   }
 
   getNodes() {

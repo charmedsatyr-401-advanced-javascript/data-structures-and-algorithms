@@ -1,9 +1,10 @@
 # Code: Graph
-* [PR](https://github.com/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms/pull/25)
-* [![Build Status](https://travis-ci.org/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms.svg?branch=graph)](https://travis-ci.org/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms)
+* [PR](https://github.com/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms/pull/26)
+* [![Build Status](https://travis-ci.org/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms.svg?branch=breadth-first-graph)](https://travis-ci.org/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms)
 
-### Hash Table
+### Graph
 * Implement a Graph.
+* Breadth First Traversal
 
 ## Challenges
 ### Graph
@@ -25,18 +26,20 @@ Implement your own Graph. The graph should be represented as an adjacency list, 
   * Include the weight of the connection in the returned collection
 * `Size()`
   * Returns the total number of nodes in the graph
+### Breadth First Traversal
+* Extend your graph object with a breadth-first traversal method that accepts a starting node. Without utilizing any of the built-in methods available to your language, return a collection of nodes in the order they were visited. Display the collection.
 
 ## Approach & Efficiency
-I created `Node` and `Edge` classes. The `Node` takes a `data` property and the `Edge` takes `node` and `weight` properties. A `Graph` class uses a JavaScript `Map` as an adjacency list and employs that structure's methods to implement the required functions. The `Graph` class has the following methods:
+* Graph: I created `Node` and `Edge` classes. The `Node` takes a `data` property and the `Edge` takes `node` and `weight` properties. A `Graph` class uses a JavaScript `Map` as an adjacency list and employs that structure's methods to implement the required functions. The `Graph` class has the following methods:
 
-* `addNode(data)`
-* `addDirectedEdge(start, end, weight)`
-* `addUndirectedEdge(a, b, weight)`
-* `getNodes()`
-* `getNeighbors(node)`
-* `size()`
-
-Most methods have an efficiency of O(1) for time and space. `getNodes` has an efficiency of O(n) for both.
+  * `addNode(data)`
+  * `addDirectedEdge(start, end, weight)`
+  * `addUndirectedEdge(a, b, weight)`
+  * `getNodes()`
+  * `getNeighbors(node)`
+  * `size()`
+  Most methods have an efficiency of O(1) for time and space. `getNodes` has an efficiency of O(n) for both.
+* Breadth
 
 ## API
 * `addNode(data)` → added node
@@ -45,6 +48,9 @@ Most methods have an efficiency of O(1) for time and space. `getNodes` has an ef
 * `getNodes()` → array of nodes
 * `getNeighbors(node)` → array of edges
 * `size()` → number
+* `breadthFirst` → array of nodes; logs the array
 
 ## Whiteboard
 N/A
+### Breadth First Traversal
+[breadth-first-graph](../../assets/breath-first-graph.jpg)
