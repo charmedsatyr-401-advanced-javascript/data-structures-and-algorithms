@@ -53,4 +53,4 @@ Implement your own Graph. The graph should be represented as an adjacency list, 
 ## Whiteboard
 N/A
 ### Breadth First Traversal
-[breadth-first-graph](../../assets/breath-first-graph.jpg)
+![breadth-first-graph](../../assets/breadth-first-graph.jpg)
