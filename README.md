@@ -18,6 +18,8 @@
 
 * [Code Challenge 27: Tree Intersection](challenges/treeIntersection/README.md)
 
+* [Code Challenge 32: Get Edges](challenges/getEdges/README.md)
+
 ### Data Structures
 * [Linked Lists](data-structures/linkedList/README.md)
 
