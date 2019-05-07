@@ -1,5 +1,7 @@
 ## Code Challenge 32: Get Edges
-[PR](https://github.com/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms/pull/23)
+* [PR](https://github.com/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms/pull/27)
+* [![Build Status](https://travis-ci.org/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms.svg?branch=get-edges)](https://travis-ci.org/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms)
+
 
 # Get Edges
 Given a business trip itinerary, and an Alaska Airlines route map, is the trip possible with direct flights? If so, how much will the total trip cost be?
