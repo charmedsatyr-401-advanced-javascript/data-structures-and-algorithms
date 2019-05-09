@@ -42,6 +42,22 @@ class Graph {
     const second = this.addDirectedEdge(b, a, weight);
     return [first, second];
   }
+  depthFirst() {
+    // declare hashtable
+    // declare stack
+    // add argument node to stack
+    // while stack.peek !== null
+    // // const current = stack.pop
+    // // if current not in hashtable, add to hashtable
+    // // const n = this.getNeighbors(current);
+    // // for (let i = 0; i < n.length; i++) {
+    // //   if (!n[i] is in hashtable) {
+    // //     add current back to stack
+    // //     add n[i] to the stack
+    // //   }
+    // // }
+    // return hashtable.print
+  }
 
   breadthFirst(node) {
     if (node === undefined || node.data === undefined) {

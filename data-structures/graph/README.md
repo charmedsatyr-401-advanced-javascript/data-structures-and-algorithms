@@ -5,6 +5,7 @@
 ### Graph
 * Implement a Graph.
 * Breadth First Traversal
+* Conduct a depth first preorder traversal on a graph
 
 ## Challenges
 ### Graph
@@ -29,6 +30,10 @@ Implement your own Graph. The graph should be represented as an adjacency list, 
 ### Breadth First Traversal
 * Extend your graph object with a breadth-first traversal method that accepts a starting node. Without utilizing any of the built-in methods available to your language, return a collection of nodes in the order they were visited. Display the collection.
 
+### Breadth First Traversal
+* Extend your graph object with a breadth-first traversal method that accepts a starting node. Without utilizing any of the built-in methods available to your language, return a collection of nodes in the order they were visited. Display the collection.
+
+
 ## Approach & Efficiency
 * Graph: I created `Node` and `Edge` classes. The `Node` takes a `data` property and the `Edge` takes `node` and `weight` properties. A `Graph` class uses a JavaScript `Map` as an adjacency list and employs that structure's methods to implement the required functions. The `Graph` class has the following methods:
 
@@ -39,7 +44,8 @@ Implement your own Graph. The graph should be represented as an adjacency list, 
   * `getNeighbors(node)`
   * `size()`
   Most methods have an efficiency of O(1) for time and space. `getNodes` has an efficiency of O(n) for both.
-* Breadth
+* Breadth First: Uses a queue to iterate through each node's neighbors. O(n^2) for time and O(n) for space.
+* Depth First: Uses a stack to iterate through each node's neighbors. O(n) for space and O(n^2) for time.
 
 ## API
 * `addNode(data)` → added node
@@ -49,8 +55,12 @@ Implement your own Graph. The graph should be represented as an adjacency list, 
 * `getNeighbors(node)` → array of edges
 * `size()` → number
 * `breadthFirst` → array of nodes; logs the array
+* `depthFirst` → array of nodes
 
 ## Whiteboard
-N/A
+
 ### Breadth First Traversal
 ![breadth-first-graph](../../assets/breadth-first-graph.jpg)
+
+### Depth First Traversal
+![depth-first-graph](../../assets/depth-first-graph.jpg)
