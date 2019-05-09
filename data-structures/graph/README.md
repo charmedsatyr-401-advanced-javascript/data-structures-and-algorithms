@@ -31,9 +31,8 @@ Implement your own Graph. The graph should be represented as an adjacency list, 
 ### Breadth First Traversal
 * Extend your graph object with a breadth-first traversal method that accepts a starting node. Without utilizing any of the built-in methods available to your language, return a collection of nodes in the order they were visited. Display the collection.
 
-### Breadth First Traversal
-* Extend your graph object with a breadth-first traversal method that accepts a starting node. Without utilizing any of the built-in methods available to your language, return a collection of nodes in the order they were visited. Display the collection.
-
+### Depth First Traversal
+* Create a function that accepts an adjacency list as a graph, and conducts a depth first traversal. Without utilizing any of the built-in methods available to your language, return a collection of nodes in their pre-order depth-first traversal order.
 
 ## Approach & Efficiency
 * Graph: I created `Node` and `Edge` classes. The `Node` takes a `data` property and the `Edge` takes `node` and `weight` properties. A `Graph` class uses a JavaScript `Map` as an adjacency list and employs that structure's methods to implement the required functions. The `Graph` class has the following methods:
@@ -46,7 +45,7 @@ Implement your own Graph. The graph should be represented as an adjacency list, 
   * `size()`
   Most methods have an efficiency of O(1) for time and space. `getNodes` has an efficiency of O(n) for both.
 * Breadth First: Uses a queue to iterate through each node's neighbors. O(n^2) for time and O(n) for space.
-* Depth First: Uses a stack to iterate through each node's neighbors. O(n) for space and O(n^2) for time.
+* Depth First: Uses a hashtable and a stack to iterate through each node's neighbors in preorder. O(n) for space and O(n^2) for time.
 
 ## API
 * `addNode(data)` → added node
