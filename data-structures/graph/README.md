@@ -1,6 +1,7 @@
 # Code: Graph
 * [PR](https://github.com/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms/pull/26)
-* [![Build Status](https://travis-ci.org/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms.svg?branch=breadth-first-graph)](https://travis-ci.org/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms)
+* [PR - Depth First](https://github.com/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms/pull/28)
+* [![Build Status](https://travis-ci.org/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms.svg?branch=depthFirst)](https://travis-ci.org/charmedsatyr-401-advanced-javascript/data-structures-and-algorithms)
 
 ### Graph
 * Implement a Graph.
